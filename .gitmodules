@@ -2,3 +2,7 @@
 	path = src/MOM6
 	url = https://github.com/NCAR/MOM6.git
 	branch = dev/ncar
+[submodule "src/FMS"]
+	path = src/FMS
+	url = https://github.com/NOAA-GFDL/FMS.git
+	branch = master
