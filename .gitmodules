@@ -6,3 +6,7 @@
 	path = src/FMS
 	url = https://github.com/NOAA-GFDL/FMS.git
 	branch = master
+[submodule "src/mkmf"]
+	path = src/mkmf
+	url = https://github.com/NOAA-GFDL/mkmf.git
+	branch = master
