@@ -1,26 +1,22 @@
-# Build directories
+FMS
+mkmf
+# Build directory might optionally be placed here
 build*
-
-# Datasets
+# Ignore .datasets
 .datasets
-
-# Model output
+# Ignore model output
 *.out
 CPU_stats.*
 _read_error.nml
 available_diags.0*
-SIS.available_diags
-SIS_fast.available_diags
 exitcode
 fort.20
 *.nc
 *.nc.*
 RESTART
 ocean.stats.*
-seaice.stats.*
-
-# Python
+# Ignore python .pyc files
 *.pyc
-
-# Vim
-*.swp
+.ipynb_checkpoints
+# Ignore anything labeled ignore
+*.ignore
