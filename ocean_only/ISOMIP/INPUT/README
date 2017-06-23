@@ -1,0 +1,7 @@
+Below are the files needed to run this experiment:
+
+https://github.com/gustavo-marques/ISOMIP/blob/master/setup/ncfiles/ISOMIP_zgrid.nc
+
+https://github.com/gustavo-marques/ISOMIP/blob/master/setup/ncfiles/3D_LAYER_WARM_IC.nc
+
+https://github.com/gustavo-marques/ISOMIP/blob/master/setup/ncfiles/Ocean1_3D.nc
