@@ -1,2 +1,2 @@
 # MOM6-cases
-Example configurations for NCAR/MOM6
+Example configurations for NCAR/MOM6.
