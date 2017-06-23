@@ -4,6 +4,8 @@ mkmf
 build*
 # Ignore .datasets
 .datasets
+# Ignore run scripts
+run*
 # Ignore model output
 *.out
 CPU_stats.*
