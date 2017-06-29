@@ -4,6 +4,9 @@ mkmf
 build*
 # Ignore .datasets
 .datasets
+# Un-ignore the following files that are to be in cime_config/
+!buildlib
+!buildnml
 # Ignore run scripts
 run*
 # Ignore model output
