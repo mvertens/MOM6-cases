@@ -11,6 +11,9 @@ module ocn_comp_mct
 ! !REVISION HISTORY:
 !
 ! !USES:
+   use esmf
+   use seq_cdata_mod
+   use mct_mod
 
 !
 ! !PUBLIC MEMBER FUNCTIONS:
@@ -113,7 +116,6 @@ contains
 ! Finalize POP
 !
 ! !USES:
-    use POP_FinalMod
 ! !ARGUMENTS:
     type(ESMF_Clock)            , intent(inout) :: EClock
     type(seq_cdata)             , intent(inout) :: cdata_o
