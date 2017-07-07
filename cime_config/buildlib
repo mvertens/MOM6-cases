@@ -39,13 +39,13 @@ def _main_func():
         sharedlibroot = case.get_value("SHAREDLIBROOT")
         fms_builddir = os.path.join(sharedlibroot,"intel","shared","repro")
 
+        os.environ["INCROOT"] = " -I " + os.path.join(srcroot,"components","mom","src","FMS","include") + \
+                                " -I " + os.path.join(srcroot,"components","mom","src","FMS","mpp","include") + \
+                                " -I " + fms_builddir                                                         
         filepath_file = os.path.join(bldroot,"Filepath")
         if not os.path.isfile(filepath_file):
             srcroot = case.get_value("SRCROOT")
             caseroot = case.get_value("CASEROOT")
-            os.environ["INCROOT"] = " -I " + os.path.join(srcroot,"components","mom","src","FMS","include") + \
-                                    " -I " + os.path.join(srcroot,"components","mom","src","FMS","mpp","include") + \
-                                    " -I " + fms_builddir                                                         
             os.environ["CPPDEFS"] = " -Duse_libMPI -Duse_netCDF -DSPMD" 
             paths = [os.path.join(caseroot,"SourceMods","src.mom"), 
                      os.path.join(srcroot,"components","mom","src","MOM6","config_src","mct_driver"),
@@ -85,7 +85,7 @@ def _main_func():
         run_cmd ("make NETCDF=3 REPRO=1 libfms.a -j")
 
         if os.path.exists("libfms.a"):
-            shutil.copy("libfms.a", os.path.join(libroot,"lib"))
+            shutil.copy("libfms.a", os.path.join(libroot))
             # filenames = glob.glob("*.mod")
             # for filename in filenames:
             #     shutil.copy(filename, os.path.join(libroot,"include"))
