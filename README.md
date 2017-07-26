@@ -11,6 +11,10 @@ MOM6 is the provisional ocean component of CESM3, a future version of NCAR's glo
 3. [Compiling cases](https://github.com/NCAR/MOM6-cases/wiki/Getting-Started#compiling-cases)
 4. [Running cases](https://github.com/NCAR/MOM6-cases/wiki/Getting-Started#running-cases)
 
+### MOM6 & CIME:
+
+* [Quick Start](https://github.com/NCAR/MOM6-cases/wiki/MOM6-CESM-Quick-Start)
+
 
 ### Developers Guide
 * [Contributing to this repo](https://github.com/NCAR/MOM6-cases/wiki/Contributing)
