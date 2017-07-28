@@ -27,7 +27,6 @@ FFLAGS_DEBUG = -O0 -check -check noarg_temp_created -check nopointer -warn -warn
 FFLAGS_OPENMP = -openmp
 FFLAGS_VERBOSE = -v -V -what
 
-
 CFLAGS := -D__IFC -sox -traceback
 CFLAGS_OPT = -O2
 CFLAGS_OPENMP = -openmp
@@ -75,7 +74,7 @@ ifeq ($(NETCDF),3)
   endif
 endif
 
-LIBS := $(shell nc-config --flibs)
+LIBS := $(shell nc-config --flibs) -lifcore
 FFLAGS += $(shell nc-config --fflags)
 LDFLAGS += $(LIBS)
 
