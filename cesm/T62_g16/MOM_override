@@ -12,5 +12,5 @@ HMIX_FIXED = 0.5
 CFL_TRUNCATE_RAMP_TIME = 7200.
 Z_INIT_ALE_REMAPPING = True
 ENERGETICS_SFC_PBL = True
-
 TOPO_FILE = "ocean_topog.nc"
+#override DEBUG=False
