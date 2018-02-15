@@ -1,6 +1,6 @@
 [submodule "src/MOM6"]
 	path = src/MOM6
-	url = https://github.com/NCAR/MOM6.git
+	url = https://github.com/mvertens/MOM6.git
 	branch = dev/ncar
 [submodule "src/FMS"]
 	path = src/FMS
