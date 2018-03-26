@@ -80,7 +80,7 @@ def _main_func():
         run_cmd( os.path.join(mkmf_dir,"list_paths") + " {}".format(fms_dir))
         
         run_cmd( os.path.join(mkmf_dir,"mkmf") + " -t " + \
-                 os.path.join(srcroot,"components","mom","src","mkmf","templates","cheyenne-intel.mk") + 
+                 os.path.join(srcroot,"components","mom","src","mkmf","templates","hobart-mpi.mk") + 
                  " -p libfms.a -c \"-Duse_libMPI -Duse_netCDF -DSPMD\" path_names")
 
         run_cmd ("make NETCDF=3 REPRO=1 libfms.a -j")

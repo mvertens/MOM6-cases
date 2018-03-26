@@ -1008,14 +1008,14 @@
     <mach name="hobart">
       <pes pesize="any" compset="any">
         <ntasks>
-          <ntasks_atm>48</ntasks_atm>
-          <ntasks_lnd>48</ntasks_lnd>
-          <ntasks_rof>48</ntasks_rof>
-          <ntasks_ice>48</ntasks_ice>
-          <ntasks_ocn>48</ntasks_ocn>
-          <ntasks_cpl>48</ntasks_cpl>
-          <ntasks_glc>48</ntasks_glc>
-          <ntasks_wav>48</ntasks_wav>
+          <ntasks_atm>144</ntasks_atm>
+          <ntasks_lnd>144</ntasks_lnd>
+          <ntasks_rof>144</ntasks_rof>
+          <ntasks_ice>144</ntasks_ice>
+          <ntasks_ocn>144</ntasks_ocn>
+          <ntasks_cpl>144</ntasks_cpl>
+          <ntasks_glc>144</ntasks_glc>
+          <ntasks_wav>144</ntasks_wav>
         </ntasks>
         <nthrds>
           <nthrds_atm>1</nthrds_atm>
