@@ -20,7 +20,7 @@ REPRO =
 VERBOSE =
 OPENMP =
 
-MAKEFLAGS += --jobs=1
+MAKEFLAGS += --jobs=8
 
 FPPFLAGS := -fpp -Wp,-w
 

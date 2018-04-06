@@ -79,11 +79,15 @@ def _main_func():
         fms_dir = os.path.join(srcroot,"components","mom","src","FMS")
         run_cmd( os.path.join(mkmf_dir,"list_paths") + " {}".format(fms_dir))
         
-        run_cmd( os.path.join(mkmf_dir,"mkmf") + " -t " + \
-                 os.path.join(srcroot,"components","mom","src","mkmf","templates","hobart-mpi.mk") + 
-                 " -p libfms.a -c \"-Duse_libMPI -Duse_netCDF -DSPMD\" path_names")
+        cmd = os.path.join(mkmf_dir,"mkmf") + " -t " + \
+              os.path.join(srcroot,"components","mom","src","mkmf","templates","theia-intel.mk") + \
+        " -p libfms.a -c \"-Duse_libMPI -Duse_netCDF -DSPMD\" path_names"
+        rc, out, err = run_cmd(cmd)
+        logger.info("%s: \n\n output:\n %s \n\n err:\n\n%s\n\n******************\n"%(cmd,out,err))
 
-        run_cmd ("make NETCDF=3 REPRO=1 libfms.a -j")
+        cmd = "make NETCDF=3 REPRO=1 libfms.a -j"
+        rc, out, err = run_cmd(cmd)
+        logger.info("%s: \n\n output:\n %s \n\n err:\n\n%s\n\n******************\n"%(cmd,out,err))
 
         if os.path.exists("libfms.a"):
             shutil.copy("libfms.a", os.path.join(libroot))
@@ -97,7 +101,6 @@ def _main_func():
         makefile = os.path.join(casetools, "Makefile")
         complib = os.path.join(libroot,"libocn.a")
         cmd = "%s complib -j %d MODEL=mom COMPLIB=%s -f %s " % (gmake, gmake_j, complib, makefile)
-
         rc, out, err = run_cmd(cmd)
         logger.info("%s: \n\n output:\n %s \n\n err:\n\n%s\n"%(cmd,out,err))
         expect(rc == 0, "Command %s failed with rc=%s" % (cmd, rc))
